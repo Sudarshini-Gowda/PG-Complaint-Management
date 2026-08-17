@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PG Complaint Management</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: rgb(245, 240, 244);
+        }
+        h1,h2{
+            color:rgb(22, 2, 157);
+        }
+        p{
+            color:rgb(225, 20, 20);
+        }
+        option{
+            color:rgb(93, 173, 23);
+        }
+        label{
+            color:rgb(140, 7, 217);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>PG Complaint Management</h1>
+    <p>Submit your complaint below</p>
+
+    <form id="complaintForm">
+
+        <label>Resident Name</label>
+        <input type="text" id="name" required>
+
+        <label>Room Number</label>
+        <input type="text" id="room" required>
+
+        <label>Contact Number</label>
+        <input type="text" id="contact" required>
+
+        <label>Complaint Category</label>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option>Electricity</option>
+            <option>Plumbing</option>
+            <option>Water</option>
+            <option>Internet</option>
+            <option>Housekeeping</option>
+            <option>Maintenance</option>
+            <option>Other</option>
+        </select>
+
+        <label>Description</label>
+        <textarea id="description" required></textarea>
+
+        <label>Priority</label>
+        <select id="priority">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+        </select>
+
+        <label>Additional Information</label>
+        <textarea id="additional"></textarea>
+
+        <button type="submit">Submit Complaint</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Complaints</h2>
+
+    <div id="complaintList"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
